@@ -9,4 +9,8 @@ export class AppComponent {
   title = ''; //property
   firstname = 'John';
   lastname = "Travolta";
+  save(){
+    console.log(this.firstname);
+    this.firstname='Ram';
+  }
 }
