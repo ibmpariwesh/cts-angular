@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import User from './entity/User';
 import UserService from './UserService';
 
@@ -7,11 +7,18 @@ import UserService from './UserService';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   constructor(private userService: UserService) { }
   title = ''; //property
   user: User = new User();
-
+  users:User[]=[];
+  ngOnInit(){
+    const promise = this.userService.getUsers();
+    promise.subscribe((response) =>{
+      console.log(response);
+      this.users=response as User[];
+    })
+  }
   save() {
     console.log(this.user.firstname);
     const promise = this.userService.save(this.user);

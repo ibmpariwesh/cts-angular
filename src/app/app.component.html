@@ -8,4 +8,11 @@
 
 <button (click)='save()'>Save</button>
 
+<ol>
+  <li *ngFor="let u of users;index as i;">
+    <span>{{u.firstname}}</span>,
+    <span>{{u.lastname}}</span>
+  </li>
+</ol>
+
 
