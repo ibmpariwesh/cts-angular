@@ -14,6 +14,10 @@ export class AppComponent {
   
   save(){
     console.log(this.user.firstname);
-    this.userService.save(this.user);    
+    const promise = this.userService.save(this.user);    
+    promise.subscribe(function(response){
+      console.log(response);
+      
+    })
   }
 }
