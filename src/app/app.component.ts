@@ -17,7 +17,6 @@ export class AppComponent {
     const promise = this.userService.save(this.user);    
     promise.subscribe(function(response){
       console.log(response);
-      
     })
   }
 }

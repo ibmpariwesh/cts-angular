@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import User from './entity/User';
 import { HttpClient } from "@angular/common/http";
 
-@Injectable()
+@Injectable()//Bean
 export default class UserService{
     constructor(private http:HttpClient){ }
     save(user:User){
@@ -11,6 +11,6 @@ export default class UserService{
             headers:{
                 "content-type":"application/json"
             }
-        })
+        });
     }
 }

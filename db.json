@@ -1,29 +1,5 @@
 {
   "users": [
-    {
-      "firstname": "Ram",
-      "lastname": "kumar",
-      "id": 3
-    },
-    {
-      "firstname": "Ram",
-      "lastname": "kumar",
-      "id": 4
-    },
-    {
-      "firstname": "Ram",
-      "lastname": "kumar",
-      "id": 5
-    },
-    {
-      "firstname": "john",
-      "lastname": "Travolta",
-      "id": 6
-    },
-    {
-      "firstname": "john",
-      "lastname": "Travolta",
-      "id": 7
-    }
+   
   ]
 }
