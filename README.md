@@ -5,6 +5,7 @@ Ng serve
 http://localhost:4200/
 
 To run a dummy REST API 
-npm i -g json-server    //run only once
-MyApp> Json-server --watch db.json
+npm i json-server    //run only once
+MyApp> json-server  --watch  db.json
+
 

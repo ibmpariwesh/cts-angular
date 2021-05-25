@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import User from './entity/User';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = ''; //property
-  firstname = 'John';
-  lastname = "Travolta";
+  user:User = new User();
+  
   save(){
-    console.log(this.firstname);
-    this.firstname='Ram';
+    console.log(this.user.firstname);
+    this.user.firstname='Ram';
   }
 }
