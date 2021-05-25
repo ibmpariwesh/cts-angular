@@ -1,4 +1,4 @@
 export default class User{
-    firstname:string='Ram';
+    firstname:string='john';
     lastname:string = "Travolta";
 }

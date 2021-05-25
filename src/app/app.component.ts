@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import User from './entity/User';
+import UserService from './UserService';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,12 @@ import User from './entity/User';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
+  constructor(private userService:UserService){}
   title = ''; //property
   user:User = new User();
   
   save(){
     console.log(this.user.firstname);
-    this.user.firstname='Ram';
+    this.userService.save(this.user);    
   }
 }
