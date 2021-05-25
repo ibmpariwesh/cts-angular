@@ -8,15 +8,23 @@ import UserService from './UserService';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  constructor(private userService:UserService){}
+  constructor(private userService: UserService) { }
   title = ''; //property
-  user:User = new User();
-  
-  save(){
+  user: User = new User();
+
+  save() {
     console.log(this.user.firstname);
-    const promise = this.userService.save(this.user);    
-    promise.subscribe(function(response){
-      console.log(response);
-    })
+    const promise = this.userService.save(this.user);
+    promise.subscribe(
+      function (response) {//success handler, 100-399
+        console.log(response);
+        alert('added successfully.')
+      },
+      function (error) {//error handler, 400-599
+        alert(error.message);
+      },
+      function (){ //complete handler
+        console.log('audit ..always called..');
+      });
   }
 }
