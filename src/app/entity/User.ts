@@ -3,5 +3,5 @@ export default class User{
     lastname:string = "Travolta";
     age:number=0;
     gender:string='';
-    id:number=-1;
+    // id:number;
 }

@@ -8,4 +8,4 @@ To run a dummy REST API
 npm i json-server    //run only once
 MyApp> json-server  --watch  db.json
 
-
+ng g pipe ellipsis

@@ -3,7 +3,7 @@ import User from './entity/User';
 import { HttpClient } from "@angular/common/http";
 const BASE_URL = "http://localhost:3000/users";
 @Injectable()//Bean
-export default class UserService {
+export  class UserService { //public = export
     constructor(private http: HttpClient) { }
     getUsers() {
         return this.http.get(BASE_URL);
@@ -17,4 +17,10 @@ export default class UserService {
             }
         });
     }
+}
+export interface MyIn{ //for learning purpose only
+
+}
+export default class A{
+    
 }

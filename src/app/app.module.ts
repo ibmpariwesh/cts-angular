@@ -5,11 +5,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import UserService from './UserService';
+import {UserService} from './UserService';
+import { CounterComponent } from './counter/counter.component';
+import { EllipsisPipe } from './ellipsis.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CounterComponent,
+    EllipsisPipe
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import User from './entity/User';
-import UserService from './UserService';
+import A, {UserService, MyIn} from './UserService';
 
 @Component({
   selector: 'app-root',
@@ -8,16 +8,15 @@ import UserService from './UserService';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent implements OnInit{
-  constructor(private userService: UserService) { }
-  title = ''; //property
+  constructor(private userService: UserService) { }//DI
   user: User = new User();
   users:User[]=[];
-  ngOnInit(){
+  ngOnInit(){ //bean - pre processors
     const promise = this.userService.getUsers();
     promise.subscribe((response) =>{
       console.log(response);
       this.users=response as User[];
-    })
+    });
   }
   save() {
     console.log(this.user.firstname);

@@ -1,17 +1,14 @@
 <h3>User form</h3>
-  {{title}}
 <input [(ngModel)]='user.firstname'> 
 <input [(ngModel)]='user.lastname'> 
 <input type="number" [(ngModel)]='user.age'> 
 <input type="radio" value="Male" [(ngModel)]='user.gender'>Male
 <input type="radio" value="FeMale" [(ngModel)]='user.gender'>Female
-
 <button (click)='save()'>Save</button>
-
 <ol>
   <li *ngFor="let u of users;index as i;">
-    <span>{{u.firstname}}</span>,
-    <span>{{u.lastname}}</span>
+    <span>{{u.firstname | uppercase}}</span>,
+    <span>{{u.lastname| ellipsis}}</span>
   </li>
 </ol>
 
