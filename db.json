@@ -34,6 +34,23 @@
       "age": 0,
       "gender": "",
       "id": 5
+    },
+    {
+      "firstname": "john",
+      "lastname": "Travolta",
+      "age": 0,
+      "gender": "",
+      "dob": "2021-05-27",
+      "id": 6
+    },
+    {
+      "firstname": "john",
+      "lastname": "Travolta",
+      "age": 0,
+      "gender": "",
+      "dob": "2021-05-26T05:48:02.013Z",
+      "education": "B.Tech",
+      "id": 7
     }
   ]
 }
