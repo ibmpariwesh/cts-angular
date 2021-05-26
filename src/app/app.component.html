@@ -11,10 +11,12 @@ Education: <input type="radio" value="B.Tech" [(ngModel)]='user.education'>B.Tec
 <input type="radio" value="Phd" [(ngModel)]='user.education'>Phd
 DOB <input type="date" [(ngModel)]='user.dob'>
 <button (click)='save()'>Save</button>
+<button (click)='sort()'>Sort</button>
 <ol>
   <li *ngFor="let u of users;index as i;">
     <span>{{u.firstname | uppercase}}</span>,
     <span>{{u.lastname| ellipsis:6: 56}}</span>,  
+    <span>{{u.age}}</span>, 
     <span>{{u.dob |date:'d/M/yyyy'}}</span>
   </li>
 </ol>

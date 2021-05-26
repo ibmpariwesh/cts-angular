@@ -3,54 +3,29 @@
     {
       "firstname": "john",
       "lastname": "Travolta",
-      "age": 0,
+      "age": 10,
       "gender": "",
+      "dob": "2021-05-26T05:56:38.299Z",
+      "education": "",
       "id": 1
     },
     {
       "firstname": "john",
       "lastname": "Travolta",
-      "age": 0,
+      "age": 9,
       "gender": "",
+      "dob": "2021-05-26T05:56:38.299Z",
+      "education": "",
       "id": 2
     },
     {
       "firstname": "john",
-      "lastname": "Trav",
-      "age": 0,
+      "lastname": "Travolta",
+      "age": 8,
       "gender": "",
+      "dob": "2021-05-26T05:56:38.299Z",
+      "education": "",
       "id": 3
-    },
-    {
-      "firstname": "john",
-      "lastname": "Travo",
-      "age": 0,
-      "gender": "",
-      "id": 4
-    },
-    {
-      "firstname": "john",
-      "lastname": "Travol",
-      "age": 0,
-      "gender": "",
-      "id": 5
-    },
-    {
-      "firstname": "john",
-      "lastname": "Travolta",
-      "age": 0,
-      "gender": "",
-      "dob": "2021-05-27",
-      "id": 6
-    },
-    {
-      "firstname": "john",
-      "lastname": "Travolta",
-      "age": 0,
-      "gender": "",
-      "dob": "2021-05-26T05:48:02.013Z",
-      "education": "B.Tech",
-      "id": 7
     }
   ]
 }

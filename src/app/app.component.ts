@@ -18,6 +18,11 @@ export class AppComponent implements OnInit{
       this.users=response as User[];
     });
   }
+  sort(){
+    this.users.sort(function(user1, user2){
+      return user1.age - user2.age;
+    })
+  }
   save() {
     console.log(this.user.firstname);
     const promise = this.userService.save(this.user);
