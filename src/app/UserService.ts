@@ -8,6 +8,9 @@ export  class UserService { //public = export
     getUsers() {
         return this.http.get(BASE_URL);
     }
+    getUsersByName(firstname:any) {
+        return this.http.get(BASE_URL+"?firstname="+firstname);
+    }
 
     save(user: User) {
         console.log(user);

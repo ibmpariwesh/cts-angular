@@ -23,15 +23,16 @@ export class AppComponent implements OnInit {
     this.users.sort((user1, user2) => { return (this.order) ? user1.age - user2.age : user2.age - user1.age });
     this.order = !this.order;
   }
-  // sort() {
-  //   if (this.order) {
-  //     this.users.sort((user1, user2) => user1.age - user2.age);
-  //     this.order = false;
-  //   } else {
-  //     this.users.sort((user1, user2) => user2.age - user1.age);
-  //     this.order = true;
-  //   }
-  // }
+  search(){
+    const element1= document.getElementById("firstname");
+    const firstName1 = ( element1 as HTMLInputElement).value;
+    if(!firstName1)
+      return;
+    const promise = this.userService.getUsersByName(firstName1);
+    promise.subscribe((response) => {
+      this.users = response as User[];
+    });
+  }
   save() {
     console.log(this.user.firstname);
     const promise = this.userService.save(this.user);

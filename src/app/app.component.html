@@ -13,7 +13,8 @@ DOB <input type="date" [(ngModel)]='user.dob'>
 <button (click)='save()'>Save</button>
 <button (click)='sort()'>Sort</button>
 <div></div>
-<input placeholder="search by first name"><button>Search</button> // http://localhost:3000/users?firstname=john&age=10
+<input placeholder="search by first name" id="firstname">
+<button (click)='search()'>Search</button> // http://localhost:3000/users?firstname=john&age=10
 <ol>
   <li *ngFor="let u of users;index as i;">
     <span>{{u.firstname | uppercase}}</span>,
