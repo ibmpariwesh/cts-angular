@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import {UserService} from './UserService';
 import { CounterComponent } from './counter/counter.component';
 import { EllipsisPipe } from './ellipsis.pipe';
+import { BaseComponent } from './base/base.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CounterComponent,
-    EllipsisPipe
+    EllipsisPipe,
+    BaseComponent
   ],
   imports: [
     BrowserModule,
@@ -21,6 +23,6 @@ import { EllipsisPipe } from './ellipsis.pipe';
     FormsModule, HttpClientModule
   ],
   providers: [UserService],
-  bootstrap: [AppComponent]
+  bootstrap: [BaseComponent]
 })
 export class AppModule { }

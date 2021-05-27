@@ -9,8 +9,8 @@ import A, { UserService, MyIn } from './UserService';
 })
 export class AppComponent implements OnInit {
   constructor(private userService: UserService) { }//DI
-  user: User = new User();
-  users: User[] = [];
+  user: User = new User(); //state
+  users: User[] = []; //state
   order: boolean = false;
   ngOnInit() { //bean - pre processors
     const promise = this.userService.getUsers();
@@ -31,7 +31,8 @@ export class AppComponent implements OnInit {
     const promise = this.userService.getUsersByName(firstName1);
     promise.subscribe((response) => {
       this.users = response as User[];
-    });
+    },
+    errorHandler);
   }
   save() {
     console.log(this.user.firstname);
@@ -41,11 +42,12 @@ export class AppComponent implements OnInit {
         console.log(response);
         alert('added successfully.')
       },
-      function (error) {//error handler, 400-599
-        alert(error.message);
-      },
+      errorHandler,
       function () { //complete handler
         console.log('audit ..always called..');
       });
   }
+}
+function errorHandler(error:any) {//error handler, 400-599
+  alert(error.message);
 }
